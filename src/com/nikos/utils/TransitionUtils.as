@@ -1,4 +1,4 @@
-package com.nikos.utils
+﻿package com.nikos.utils
 {
 import flash.display.*;
 import flash.geom.*;
@@ -451,7 +451,7 @@ public class TransitionUtils
 	
 	public static function random(pieces:Array,rows:uint,columns:uint):Object
 	{ //v1.0
-		for(var j, x, i = pieces.length; i; j = Math.floor(Math.random() * i), x = pieces[--i], pieces[i] = pieces[j], pieces[j] = x);
+		for(var j, x, i = pieces.length; i; j = Math.floor(Math.random() * i), x = pieces[--i], pieces[i] = pieces[j], pieces[j] = x){};
 		return ({pieces:pieces, delays:linearArray(pieces.length), groups:pieces.length});
 	}
 	
