@@ -80,8 +80,9 @@ public class FadeTiles extends Transition
 		count=0;
 		for (var j=0; j<pieces.length ; j++)
 		{
-			pieces[j].alpha=0.0;
-			TweenMax.to(pieces[j], d, {delay:ordobj.delays[j]*(d-o), useFrames:useFrames, immediateRender:startNow, alpha:1.0, ease:eas, onInit:doinit, onInitParams:[pieces[j]], onComplete:doall});			
+			pieces[j].alpha = 0.0;
+			doinit(pieces[j]);
+			TweenMax.to(pieces[j], d, {delay:ordobj.delays[j]*(d-o), useFrames:useFrames, immediateRender:startNow, alpha:1.0, ease:eas, onComplete:doall});			
 		}
 		function doinit(gt:DisplayObject):void
 		{
