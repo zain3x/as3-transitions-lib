@@ -13,6 +13,36 @@ __Image Transitions Library for Actionscript 3__  (FP 9, FP10, FP11)
 ###Manual
 * http://foo123.github.com/examples/as3-transitions-lib/manual.pdf
 
+###How to Use
+* register source (use symlink to com folder)
+* register dependency folder
+
+###Simple Sample Code
+stage
+|- mc1:MovieClip
+|- mc2:MOvieClip
+
+````
+import com.nikos.mytransitions.*;
+import fl.transitions.easing.*;
+
+var foo:FadeTiles = new FadeTiles();
+//FadeTiles.useFrames = false; //uncomment to use second for duration
+
+addChild(foo);
+
+foo.doit({
+	toTarget:mc2,
+	fromTarget:mc1,
+	duration:40,
+	easing:None.easeInOut,
+	rows:8,
+	columns:4,
+	overlap:0.92,
+	ordering:"random"
+});
+````
+
 ###TODO
 * Transform the library into Flash IDE components ( _in progress_  incomplete source code has been added )
 
