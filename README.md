@@ -7,21 +7,24 @@ __Image Transitions Library for Actionscript 3__  (FP 9, FP10, FP11)
 [![Live Example](/screenshots/screenshot1.png)](http://foo123.github.com/examples/as3-transitions-lib/)
 
 
-###Live Example
+### Live Example
 * http://foo123.github.com/examples/as3-transitions-lib/
 
-###Manual
+### Manual
 * http://foo123.github.com/examples/as3-transitions-lib/manual.pdf
 
-###How to Use
+### How to Use
 * register source (use symlink to com folder)
 * register dependency folder
 
-###Simple Sample Code
+### Simple Sample Code
+#### hierarchy
+````
 stage
 |- mc1:MovieClip
 |- mc2:MOvieClip
-
+````
+#### main as3 script
 ````
 import com.nikos.mytransitions.*;
 import fl.transitions.easing.*;
@@ -43,7 +46,7 @@ foo.doit({
 });
 ````
 
-###TODO
+### TODO
 * Transform the library into Flash IDE components ( _in progress_  incomplete source code has been added )
 
 This project along with [flasher xml slideshow](https://github.com/foo123/flasher) were initiated some years back,
