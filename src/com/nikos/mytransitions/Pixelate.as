@@ -69,8 +69,9 @@ public class Pixelate extends Transition
 	var mod2x:Number=Math.pow(1/maxx,1/(duration/2));
 	var mod2y:Number=Math.pow(1/maxy,1/(duration/2));
 	pix1={a:0.0, modx:mod1x, mody:mod1y, pixxi:1, pixyi:1, pixxf:maxx, pixyf:maxy, sourc:t};
-	pix2={a:0.0, modx:mod2x, mody:mod2y, pixxi:maxx, pixyi:maxy, pixxf:1, pixyf:1, sourc:t2};
-	TweenMax.to(pix1, duration, {delay:0, useFrames:useFrames, immediateRender:startNow, a:1.0, ease:eas, onInit:render, onInitParams:[pix1], onUpdate:render, onUpdateParams:[pix1], onComplete:doall});
+	pix2 = { a:0.0, modx:mod2x, mody:mod2y, pixxi:maxx, pixyi:maxy, pixxf:1, pixyf:1, sourc:t2 };
+	render(pix1);
+	TweenMax.to(pix1, duration, {delay:0, useFrames:useFrames, immediateRender:startNow, a:1.0, ease:eas, onUpdate:render, onUpdateParams:[pix1], onComplete:doall});
 	
 	function render(tobj:Object):void
 	{

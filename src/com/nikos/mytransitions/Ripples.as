@@ -85,8 +85,10 @@ public class Ripples extends Transition
 	holder.mask=ms; // add mask
 	this.addChild(holder);
 	
-	var tobj:Object={t:-1, tprev:-2};
-	TweenMax.to(tobj, duration, {onInit:doinit, onComplete:doall, onUpdate:doripple, onUpdateParams:[tobj], immediateRender:startNow, useFrames:useFrames, t:-1, bezierThrough:[{t:0}], ease:eas});
+	var tobj:Object = { t: -1, tprev: -2 };
+	
+	doinit();
+	TweenMax.to(tobj, duration, {onComplete:doall, onUpdate:doripple, onUpdateParams:[tobj], immediateRender:startNow, useFrames:useFrames, t:-1, bezierThrough:[{t:0}], ease:eas});
 	
 	function doinit():void
 	{
